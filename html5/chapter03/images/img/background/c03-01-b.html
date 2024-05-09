@@ -69,5 +69,52 @@
   <!-- images/img폴더 안에 background폴더 생성후 beach.jpg를 복사 이름 변경 i-i-b-beach.jpg -->
   <img src="images/img/background/i-i-b-beach.jpg">
   <!-- background폴더에 c03-01.html 복사후 c03-01-b.html 이름 변경 -->
-</body>
+  <!-- c03-01-b.html -->
+  <!-- 같은 폴더에 있는 이미지 -->
+  <img src="i-i-b-beach.jpg">
+  <!-- i-i-beach.jpg -->
+  <img src="../i-i-beach.jpg">
+  <!-- i-beach.jpg -->
+  <img src="../../i-beach.jpg">
+  <!-- beach.jpg -->
+  <img src="../../../beach.jpg">
+
+  <!-- img 폴더에 img01 폴더 생성 beach.jpg 복사 후
+    i-i01-beach.jpg 이름 변경 -->
+  <img src="../img01/i-i01-beach.jpg">
+  <!-- img 폴더에 img02 폴더 생성 beach.jpg 복사 후
+    i-i02-beach.jpg 이름 변경 -->
+  <img src="../img02/i-i02-beach.jpg">
+  <!-- images 폴더에 imges01 폴더 생성 beach.jpg 복사 후
+    i01-beach.jpg 이름 변경 -->
+  <img src="../../images01/i01-beach.jpg">
+
+  <!-- 현재 폴더 -->
+  <img src="./i-i-b-beach.jpg">
+  <img src="i-i-b-beach.jpg">
+
+  <!-- 웹 상의 링크를 복사해 이미지 경로 지정하기 
+    http:// 부터 시작해서 파일 이름 확장자까지
+    일반적으로는 잘하지 않죠
+  -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png">
+
+  <!-- 
+    alt속성 - 이미지를 설명해 주는 대체 텍스트 
+    1. 화면 낭독기에서 읽어 줍니다
+    2. 이미지가 제대로 안나올 때 alt에 값이 나옵니다
+    html5에서는 alt속성을 꼭 넣어 주는게 표준이다
+  -->
+  <img src="i-i-b-beac.jpg" alt="위에서 내려다 보는 해변 사진">
+
+  <!-- 
+    width, height 속성 - 이미지 크기 조정하기
+    width, height 속성을 사용하지 않으면 원본 이미지 크기 그대로 브라우저 화면에 표시됩니다
+    width - 너비, height - 높이
+    단위는 pixel - 점 단위
+    일반적으로는 이 속성은 사용하지 않습니다
+    이미지가 작은게 필요 할때는 원본사이즈를 줄여서 데이터 크기를 줄이는 것이 효율적이고
+    큰 이미지가 필요 할 때는 확대를 하게 되면 깍뚜기 모양이 나오기 때문에 이 속성으로 확대 하지 않습니다
+  -->
+
 </html>
