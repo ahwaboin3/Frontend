@@ -19,6 +19,7 @@
       height: 200px;
       border: 1px solid black;
       background-image: url(img/20191229153530528.jpg);
+      background-repeat: no-repeat;
     }
     /* auto
       원래 배경 이미지 크기 그대로 표시됩니다
@@ -26,9 +27,38 @@
     #d1{
       background-size: auto;
     }
+    /* <크기 값> 
+      너비, 높이 순서
+    */
+    #d2{
+      background-size: 400px 200px;
+      background-size: 400px;
+    }
+    /* <백분율>
+    가로, 세로 순으로 입력
+    */
+    #d3{
+      background-size: 50%;
+    }
+    /* contain
+      요소 안에 모든 배경 이미지가 표시 되도록 확대하거나 축소합니다
+    */
+    #d4{
+      background-size: contain;
+    }
+    /* cover
+      요소 전체를 모두 덮도록 배경 이미지를 확대하거나 축소합니다
+    */
+    #d5{
+      background-size: cover;
+    }
   </style>
 </head>
 <body>
+  <div id="d5" class="cd1"></div>
+  <div id="d4" class="cd1"></div>
+  <div id="d3" class="cd1"></div>
+  <div id="d2" class="cd1"></div>
   <div id="d1" class="cd1"></div>
 </body>
 </html>
