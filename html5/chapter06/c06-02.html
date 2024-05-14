@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* c06-02.html */
+    /* 텍스트 스타일 */
+    /* color 속성 - 글자 색 지정하기 
+      기본형
+      color:<색상>
+      color 속성에서 사용 할 수 있는 색상 값
+      - 16진수
+      - rgb
+      - rgba
+      - hsl
+      - hsla
+      - 색상 이름
+    */
+    /* 16진수 사용 
+      # - 16진수 여섯개
+      16진수 0~f까지로 표현
+      두자리수마다 red, green, blue색을 표현
+      빛의 삼원색
+      color picker에서 적당한 색을 골라서 색상을 복사해 와서 사용한다
+    */
+    #h01{
+      color:#ffb6ee
+    }
+    /* rgb
+     기본형
+     rgb(0~255,0~255,0~255)
+    */
+    #h02{
+      color:rgb(255, 155, 155)
+    }
+    /* rgba :rgb에 투명도 추가
+      기본형
+      rgba(0,0,0,1)
+      투명도의 범위: 0~1
+    */
+    #h03{
+     color:rgba(255, 115, 0, 0.700)
+    }
+  </style>
+</head>
+<body>
+  <h1 id="h03">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+  <h1 id="h02">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+  <h1 id="h01">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+</body>
+</html>
