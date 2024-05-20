@@ -43,9 +43,41 @@
       font-size: 20px;
     }
     /* :nth-child(n)와 :nth-last-child(n) 가상 클래스 선택자 - 자식 요소의 위치에 따라 스타일 적용하기 */
+    /* 테이블 행의 홀수 번째 자식요소에 스타일 적용 */
+    table td{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table tr:nth-child(2n+1){
+      background-color: darkgray;
+    }
+    /* 테이블 행의 짝수 번째 자식요소에 스타일 적용 */
+    table tr:nth-child(2n){
+      background-color: dimgray;
+    }
+    /* 홀수: odd, 2n+1 
+      짝수 : even, 2n
+    */
+    /* :first-child, :last-child 가상 클래스 선택자 - 첫 번째, 마지막 요소에 스타일 적용하기 */
+    table td:first-child{
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    table td:last-child{
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   </style>
 </head>
 <body>
+  <table>
+    <tr>
+      <td>열 column 1</td>
+      <td>열 column 2</td>
+      <td>열 column 2-1</td>
+      <td>열 column 3</td>
+    </tr>
+  </table>
   <table>
     <tr><td>행 row 1</td></tr>
     <tr><td>행 row 1</td></tr>
