@@ -25,7 +25,64 @@
   <div class="gradation"></div><div class="gradation"></div><div class="gradation"></div><div class="gradation"></div><div class="gradation"></div>
 
   <div class="d01c"></div>
+  <style>
+    #first{
+      border:1px solid black;
+      margin: 5px;
+    }
+    #second{
+      border:1px solid black;
+      margin: 5px;
+    }
+  </style>
+  <div id="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <div id="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+
+  <h1 id="rH1">제거 대상 문서 객체</h1>
   <script>
+    const rH1=document.querySelector("#rH1")
+    setTimeout(()=>{
+      // document.body.removeChild(rH1)
+      rH1.parentNode.removeChild(rH1)
+    },1000)
+
+    /* 
+      자신의 부모 객체 선택하는 속성
+      parentNode
+
+      문서객체.parentNode.removeChild(문서객체)
+    */
+
+    /* 문서 객체 제거하기
+      기본형
+      부모객체.removeChild(자식객체)
+    */
+
+    const divA=document.querySelector("#first")
+    const divB=document.querySelector("#second")
+    const h1=document.createElement("h1")
+
+    h1.textContent="이동하는 h1 태그"
+
+    const toFirst=()=>{
+      divA.appendChild(h1)
+      setTimeout(toSecond,1000)
+    }
+    const toSecond=()=>{
+      divB.appendChild(h1)
+      setTimeout(toFirst,1000)
+    }
+    toFirst()
+
+    /* 문서 객체 이동하기
+      appendChild()메소드로 문서 객체를 이동할 때도 사용할 수 있습니다
+      문서 객체를 다른 문서 객체에 추가하면 문서 객체가 이동합니다
+    */
+
     //변수나 상수 선언부
     //부모 객체 가져오기
     const d01c=document.querySelector(".d01c")
