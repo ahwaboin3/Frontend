@@ -34,6 +34,12 @@
             status.textContent="이벤트 연결 상태: 연결"
         })
 
+        //이벤트 해제
+        dButton.addEventListener("click",()=>{
+            h102.removeEventListener("click",listener)
+            status.textContent="이벤트 연결 상태: 해제"
+        })
+
         /* 이벤트 연결 제거하기
             기본형
             문서 객체.removeEventListener(이벤트 이름, 이벤트 리스너)
