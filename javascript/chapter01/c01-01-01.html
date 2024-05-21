@@ -15,12 +15,19 @@
     design pattern
     문서가 모두 로드된 이벤트가 발생 했을 때 코드를 실행 하겠다 - 옵저버 패턴
     */
+    /* 
+      addEventListener()
+      첫 번째 인자 - 이벤트 이름
+      두 번째 인자 - 콜백 함수
+    */ 
     document.addEventListener("DOMContentLoaded",()=>{
-
+      const h103=document.querySelector("#h103")
+      h103.textContent="Hello Node.js"
     });
   </script>
 </head>
 <body>
+  <h1 id="h103">Hello World!</h1>
   <img src="img/pattern.jpg">
 </body>
 </html>
